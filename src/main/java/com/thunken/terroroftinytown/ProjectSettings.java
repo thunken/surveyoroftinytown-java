@@ -8,7 +8,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy.SnakeCaseStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import lombok.Value;
@@ -17,7 +16,7 @@ import lombok.Value;
  * Immutable representation of a response from the API for Terror of Tiny Town projects on
  * <a href="https://tracker.archiveteam.org:1338/status">https://tracker.archiveteam.org:1338/status</a>.
  */
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
 @JsonNaming(SnakeCaseStrategy.class)
 @JsonPropertyOrder(alphabetic = true)
 @Value

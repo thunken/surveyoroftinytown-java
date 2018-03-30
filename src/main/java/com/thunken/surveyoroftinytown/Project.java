@@ -8,7 +8,6 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy.SnakeCaseStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.thunken.terroroftinytown.ProjectSettings;
 
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import lombok.Value;
@@ -18,7 +17,7 @@ import lombok.Value;
  *
  * @see Projects
  */
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
 @JsonNaming(SnakeCaseStrategy.class)
 @JsonPropertyOrder(alphabetic = true)
 @Value
