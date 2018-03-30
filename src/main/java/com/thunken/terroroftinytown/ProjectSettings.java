@@ -9,17 +9,19 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy.SnakeCaseStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import lombok.Value;
 
 /**
- * Immutable representation of a response from the API for Terror of Tiny Town projects on
+ * Simple representation of a response from the API for Terror of Tiny Town projects on
  * <a href="https://tracker.archiveteam.org:1338/status">https://tracker.archiveteam.org:1338/status</a>.
  */
 @AllArgsConstructor
+@Data
 @JsonNaming(SnakeCaseStrategy.class)
 @JsonPropertyOrder(alphabetic = true)
-@Value
+@NoArgsConstructor
 public final class ProjectSettings implements Comparable<ProjectSettings> {
 
 	@NonNull

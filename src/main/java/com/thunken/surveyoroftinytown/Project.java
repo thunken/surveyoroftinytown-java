@@ -9,18 +9,20 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.thunken.terroroftinytown.ProjectSettings;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import lombok.Value;
 
 /**
- * Immutable representation of a project surveyed in Surveyor of Tiny Town.
+ * Simple representation of a project surveyed in Surveyor of Tiny Town.
  *
  * @see Projects
  */
 @AllArgsConstructor
+@Data
 @JsonNaming(SnakeCaseStrategy.class)
 @JsonPropertyOrder(alphabetic = true)
-@Value
+@NoArgsConstructor
 public final class Project implements Comparable<Project> {
 
 	@NonNull
