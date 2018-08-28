@@ -7,7 +7,7 @@
 
 [![Release](https://jitpack.io/v/thunken/surveyoroftinytown-java.svg?style=flat-square)](https://github.com/thunken/surveyoroftinytown-java/releases)
 
-To add a dependency on this project using Gradle, Maven, sbt, or Leiningen, we recommend using [JitPack](https://jitpack.io/#thunken/surveyoroftinytown-java/1.0.3). The Maven group ID is `com.github.thunken`, and the artifact ID is `surveyoroftinytown-java`.
+To add a dependency on this project using Gradle, Maven, sbt, or Leiningen, we recommend using [JitPack](https://jitpack.io/#thunken/surveyoroftinytown-java/1.0.4). The Maven group ID is `com.github.thunken`, and the artifact ID is `surveyoroftinytown-java`.
 
 For example, for Maven, first add the JitPack repository to your build file:
 ```xml
@@ -24,7 +24,7 @@ And then add the dependency:
 	<dependency>
 	    <groupId>com.github.thunken</groupId>
 	    <artifactId>surveyoroftinytown-java</artifactId>
-	    <version>1.0.3</version>
+	    <version>1.0.4</version>
 	</dependency>
 ```
 
