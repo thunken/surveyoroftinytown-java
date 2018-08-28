@@ -1,6 +1,7 @@
 package com.thunken.terroroftinytown;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -46,6 +47,21 @@ public final class ProjectSettings implements Comparable<ProjectSettings> {
 	}
 
 	/**
+	 * Return the URL of the given project's settings on the URLTeam's tracker.
+	 *
+	 * @param name
+	 *            the name of the project
+	 * @return the URL of the given project's settings on the URLTeam's tracker
+	 * @throws MalformedURLException
+	 *             if a malformed URL occurs
+	 * @throws NullPointerException
+	 *             if {@code name} is null
+	 */
+	public static URL getUrl(@NonNull final String name) throws MalformedURLException {
+		return new URL("https://tracker.archiveteam.org:1338/api/project_settings?name=" + name);
+	}
+
+	/**
 	 * Load the settings for the given project on Terror of Tiny Town.
 	 *
 	 * @param name
@@ -57,7 +73,7 @@ public final class ProjectSettings implements Comparable<ProjectSettings> {
 	 *             if {@code name} is null
 	 */
 	public static ProjectSettings of(@NonNull final String name) throws IOException {
-		return of(new URL("https://tracker.archiveteam.org:1338/api/project_settings?name=" + name));
+		return of(getUrl(name));
 	}
 
 	/**

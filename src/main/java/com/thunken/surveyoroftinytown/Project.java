@@ -1,6 +1,8 @@
 package com.thunken.surveyoroftinytown;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -42,6 +44,19 @@ public final class Project implements Comparable<Project> {
 	 */
 	public ProjectSettings getSettings() throws IOException {
 		return isWarriorProject() ? ProjectSettings.of(getWarriorProjectName()) : null;
+	}
+
+	/**
+	 * Return the URL of the given project's settings on the URLTeam's tracker, or null if this project is not a Warrior
+	 * project.
+	 *
+	 * @return the URL of the given project's settings on the URLTeam's tracker, or null if this project is not a
+	 *         Warrior project
+	 * @throws MalformedURLException
+	 *             if a malformed URL occurs
+	 */
+	public URL getSettingsURL() throws MalformedURLException {
+		return isWarriorProject() ? ProjectSettings.getUrl(getWarriorProjectName()) : null;
 	}
 
 	public boolean isWarriorProject() {
