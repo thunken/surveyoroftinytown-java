@@ -25,7 +25,9 @@ import lombok.NonNull;
 public final class ProjectSettings implements Comparable<ProjectSettings> {
 
 	@NonNull
-	private String alphabet, bodyRegex, locationAntiRegex, method, name, urlTemplate;
+	private String alphabet, bodyRegex, method, name, urlTemplate;
+
+	private String locationAntiRegex;
 
 	private boolean autoqueue, enabled;
 
